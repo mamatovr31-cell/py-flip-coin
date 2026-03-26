@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
-    n = 10000
+    num_flips = 10000
     results = [0] * 11
-    for _ in range(n):
+    for _ in range(num_flips):
         heads = sum(random.randint(0, 1) for _ in range(10))
         results[heads] += 1
-    return {i: round(results[i] / n * 100, 2) for i in range(11)}
+    return {i: round(results[i] / num_flips * 100, 2) for i in range(11)}
 
 
 def draw_gaussian_distribution_graph() -> None:
